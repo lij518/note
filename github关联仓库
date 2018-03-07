@@ -1,0 +1,14 @@
+#### 在本地创建一个新仓库并关联：<br>
+cd /path/to/repo<br>
+touch README.md<br>
+git init<br>
+git add README.md<br>
+git commit -m "First commit"<br>
+git remote add origin +"地址"<br>
+git push -u origin master<br>
+#### 将远程仓库拉入本地仓库<br>
+git pull --rebase origin master<br>
+#### 提交远程仓库
+git add .//添加文件夹下的所有文件<br>
+git commit -m "描述"<br>
+git push -u origin master
