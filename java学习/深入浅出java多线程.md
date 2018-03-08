@@ -88,7 +88,11 @@ public class ArmyRunnable implements Runnable{
 public class Stage extends Thread{
 
   public void run(){
-
+    System.out.println("欢迎观看隋唐演义");
+    Thread.sleep(5000);
+    System.out.println("大幕徐徐拉开");
+    Thread.sleep(5000);
+    System.out.println("话说隋朝末年，隋军与农民起义军杀得昏天黑地...");
     ArmyRunnable armyTaskOfSuiDynasty=new ArmyRunnable();
     ArmyRunnable armyTaskOfRevol=new ArmyRunnable();
     //使用Runnable接口创建线程
@@ -99,15 +103,34 @@ public class Stage extends Thread{
     armyOfRevol.start();
     //舞台线程休眠
     Thread.sleep(50);
+    System.out.println("正当双方激战正酣，半路杀出了哥程咬金");
+    Thread mrCheng=new KeyPersonThread();
+    mrCheng.setName("程咬金");
+    System.out.println("程咬金的理想就是结束战争，使百姓安居乐业！");
     armyTaskOfSuiDynasty.keepRunning=false;
     armyTaskOfRevol.keepRunning=false;
-
-    armyTaskOfRevol.join();
+    Thread.sleep(2000);
+    /*
+    *历史大戏留给关键人物
+    */
+    mrCheng.start();
+    //万众瞩目，所有线程等待程先生完成历史使命
+    mrCheng.join();
+    System.out.println("战争结束，人民安居乐业，程先生实现了积极的人生理想，为人民做出了贡献");
+    System.out.println("谢谢观看隋唐演义，再见");
   }
   public static void main(String[] args){
     new Stage().start();
   }
 }
+public class KeyPersonThread extends Thread{
 
-
+    public void run(){
+      System.out.println(Thread.currentThread().getName()+"开始了战斗");
+      for(int i=0;i<10;i++){
+        System.out.println(Thread.currentThread().getName()+"左突右杀，攻击隋军...");
+      }
+      System.out.println(Thread.currentThread().getName()+"结束了战斗");
+    }
+}
 ```
