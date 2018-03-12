@@ -114,3 +114,8 @@ global session ：基于portlet的web中有效（portlet定义了global session)
 ![dd](assets/markdown-img-paste-20180310213847992.png)
 ![ee](assets/markdown-img-paste-20180310213859654.png)
 ![ff](assets/markdown-img-paste-20180310214014461.png)
+####  Aware
+Spring 中提供了一些以Aware结尾的接口，实现了Aware接口的bean在被初始化之后，<br>
+可以获取相应资源<br>
+通过Aware接口，可以对Spring相应资源进行操作（一定要慎重）<br>
+为对Spring进行简单的扩展提供了方便的入口<br>
