@@ -119,3 +119,16 @@ Spring 中提供了一些以Aware结尾的接口，实现了Aware接口的bean�
 可以获取相应资源<br>
 通过Aware接口，可以对Spring相应资源进行操作（一定要慎重）<br>
 为对Spring进行简单的扩展提供了方便的入口<br>
+#### Bean的自动装配(Autowiring)
+No:不做任何操作<br>
+byname:根据属性名自动装配。此选项将坚持容器并根据名字查找与属性完全一致的bean，并将其与属性自动装配<br>
+byType:如果容器中存在一个与指定属性类型相同的bean，那么将与该属性自动装配；如果存在多个该类型bean，那么抛出异常，并指出不能使用byType方式进行自动装配；如果没有找到相匹配的bean，则什么事都不发生<br>
+Constructor:与byType方式类似，不同之处在于它应用于构造参数。如果容器中没有找到与构造器参数类型一致的bean，那么抛出异常。<br
+#### Resources
+
+- UrlResource :URL对应的资源，根据一个URL地址即可构建<br>
+- ClassPathResource:获取类路径下的资源文件<br>
+- FileSystemResource:获取文件系统里面的资源<br>
+- ServletContextResource:ServletContext封装的资源，用于访问ServletContext环境下的资源<br>
+- InputStreamResource:针对于输入流封装的资源
+- ByteArrayResource:针对于字节数组封装的资源
