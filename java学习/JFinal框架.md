@@ -71,3 +71,6 @@ public class User extends Model<User>{
 特别注意：User中定义的public static final User dao 对象是全局共享的，只能用于数据库查询，
 不能用于<br>
 数据承载对象。数据承载需要使用new User().set(...)来实现。
+#### TemplateEngine指令讲解
+输出指令#()<br>
+if指令
