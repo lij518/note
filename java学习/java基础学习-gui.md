@@ -202,5 +202,319 @@ public class Demo3 extends JFrame {
 		this.setVisible(true);
 	}
 }
+/**
+ * 多种布局管理器的使用
+ */
+package com.test;
+import java.awt.*;
+import javax.swing.*;
+public class Demo4 extends JFrame{
+
+	//定义组件
+	JPanel jp1,jp2;
+	JButton jb1,jb2,jb3,jb4,jb5,jb6;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo4 demo4=new Demo4();
+	}
+	//构造函数
+	public Demo4() {
+
+		//创建组件
+		//JPanel布局默认是FlowLayout
+		jp1=new JPanel();
+		jp2=new JPanel();
+		jb1=new JButton("西瓜");
+		jb2=new JButton("苹果");
+		jb3=new JButton("荔枝");
+		jb4=new JButton("葡萄");
+		jb5=new JButton("桔子");
+		jb6=new JButton("香蕉");
+
+		//设置布局管理器
+
+		//添加JPanel
+		jp1.add(jb1);
+		jp1.add(jb2);
+		jp2.add(jb3);
+		jp2.add(jb4);
+		jp2.add(jb5);
+
+		//把Panel加入JFrame
+
+		this.add(jp1,BorderLayout.NORTH);
+		this.add(jb6,BorderLayout.CENTER);
+		this.add(jp2, BorderLayout.SOUTH);
+		this.setTitle("多种布局管理器");
+		this.setSize(300, 200);
+		this.setLocation(200, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+}
+/**
+ * 会员管理系统
+ */
+package com.test;
+import java.awt.*;
+import javax.swing.*;
+public class Demo5 extends JFrame{
+	//定义组件
+	JPanel jp1,jp2,jp3;
+	JLabel jlb1,jlb2;
+	JButton jb1,jb2;
+	JTextField jtf;
+	JPasswordField jpf;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo5 demo5=new Demo5();
+	}
+	//构造函数
+	public Demo5() {
+		jp1=new JPanel();
+		jp2=new JPanel();
+		jp3=new JPanel();
+
+		jlb1=new JLabel("用户名:");
+		jlb2=new JLabel("密    码:");
+
+		jb1=new JButton("登录");
+		jb2=new JButton("取消");
+
+		jtf=new JTextField(10);
+		jpf=new JPasswordField(10);
+		//设置布局管理
+		this.setLayout(new GridLayout(3,1));
+		//加入各个组件
+		jp1.add(jlb1);
+		jp1.add(jtf);
+		jp2.add(jlb2);
+		jp2.add(jpf);
+		jp3.add(jb1);
+		jp3.add(jb2);
+		//加入到JFrame
+		this.add(jp1);
+		this.add(jp2);
+		this.add(jp3);
+		this.setTitle("登录界面");
+		this.setSize(300, 150);
+		this.setLocation(500, 300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+}
+/**
+ * 复选框和单选框案例
+ */
+package com.test;
+import java.awt.*;
+import javax.swing.*;
+public class Demo6 extends JFrame{
+	//定义
+	/**
+	 * 特别说明：同一组单选按钮必须先创建ButtonGroup,然后把单选框组件放入到
+	ButtonGroup中。
+	 */
+	JPanel jp1,jp2,jp3;
+	JLabel jl1,jl2;
+	JButton jb1,jb2;
+	JCheckBox jcb1,jcb2,jcb3;
+	JRadioButton jrb1,jrb2;
+	ButtonGroup bg;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Demo6 demo6=new Demo6();
+	}
+	//构造函数
+	public Demo6() {
+
+		//创建组件
+		jp1=new JPanel();
+		jp2=new JPanel();
+		jp3=new JPanel();
+		jl1=new JLabel("你喜欢的运动");
+		jl2=new JLabel("你的性别");
+		jb1=new JButton("注册用户");
+		jb2=new JButton("取消注册");
+
+		jcb1=new JCheckBox("足球");
+		jcb2=new JCheckBox("篮球");
+		jcb3=new JCheckBox("网球");
+
+		jrb1=new JRadioButton("男");
+		jrb2=new JRadioButton("女");
+		//一定要把jrb1,jrb2 放入到一个ButtonGroup中
+		ButtonGroup bg=new ButtonGroup();
+		bg.add(jrb1);
+		bg.add(jrb2);
+		//设置布局管理器
+		this.setLayout(new GridLayout(3,1));
+
+		//添加组件
+		jp1.add(jl1);
+		jp1.add(jcb1);
+		jp1.add(jcb2);
+		jp1.add(jcb3);
+
+		jp2.add(jl2);
+		jp2.add(jrb1);
+		jp2.add(jrb2);
+
+		jp3.add(jb1);
+		jp3.add(jb2);
+		this.add(jp1);
+		this.add(jp2);
+		this.add(jp3);
+
+		this.setSize(300,150);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+}
+package com.test;
+import java.awt.*;
+import javax.swing.*;
+/**
+ * @author lijun
+ * @time 2018年4月18日  下午7:28:35
+ * 1、下拉框组件（JComboBox）
+ * 2、列表框组件（JList）
+ * 3、滚动窗格组件（JScrollPane）
+ */
+public class Demo7 extends JFrame{
+
+	//定义
+	JPanel jp1,jp2;
+	JLabel jl1,jl2;
+	JComboBox jcb;
+	JList jlist;
+	JScrollPane jsp;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Demo7();
+	}
+	//构造函数
+	public Demo7() {
+
+		jp1=new JPanel();
+		jp2=new JPanel();
+		jl1=new JLabel("你的籍贯");
+		jl2=new JLabel("旅游地点");
+
+		String[] jg= {"北京","上海","天津","火星"};
+		jcb=new JComboBox(jg);
+
+		String[] dd= {"九寨沟","故宫","长城","天安门"};
+		jlist=new JList(dd);
+		jsp=new JScrollPane(jlist);
+		//设置你希望显示多少个选项
+		jlist.setVisibleRowCount(2);//list 显示的行数
+
+		//设置布局
+		this.setLayout(new GridLayout(3,1));
+		//添加组件
+		jp1.add(jl1);
+		jp1.add(jcb);
+		jp2.add(jl2);
+		jp2.add(jsp);
+		this.add(jp1);
+		this.add(jp2);
+		this.setSize(300,300);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+	}
+
+}
+
+package com.test;
+import java.awt.*;
+import javax.swing.*;
+/**
+ * @author lijun
+ * @time 2018年4月18日  下午7:57:42
+ * 词霸
+ */
+public class Demo8 extends JFrame{
+
+	//定义组件
+	JSplitPane jsp;
+	JList jlist;
+	JLabel jl;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Demo8();
+	}
+	public Demo8() {
+		//创建组件
+		String [] words= {"boy","girl","bird"};
+		jlist=new JList(words);
+		jl=new JLabel(new ImageIcon("images/1.jpg"));
+		//拆分窗格
+		jsp=new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,jlist,jl);
+		//可以变化
+		jsp.setOneTouchExpandable(true);
+		//设置布局管理器
+		//添加组件
+		this.add(jsp);
+		this.setSize(400,300);
+		this.setLocation(200, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+
+	}
+
+}
+package com.test;
+import java.awt.*;
+import javax.swing.*;
+/**
+ * @author lijun
+ * @time 2018年4月18日  下午8:18:57
+ * @todo  qq聊天窗口
+ */
+public class Demo9 extends JFrame{
+
+	JTextArea jta;
+	JScrollPane jsp;
+	JPanel jp1;
+	JComboBox jcb;
+	JTextField jtf;
+	JButton jb;
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new Demo9();
+	}
+	public Demo9() {
+		jta=new JTextArea();
+		jsp=new JScrollPane(jta);
+		jp1=new JPanel();
+		String[] chatter= {"布什","拉登"};
+		jcb=new JComboBox(chatter);
+		jtf=new JTextField(10);
+		jb=new JButton("发送");
+		//设置布局
+
+		//添加组件
+		jp1.add(jcb);
+		jp1.add(jtf);
+		jp1.add(jb);
+
+		this.add(jsp);
+		this.add(jp1,BorderLayout.SOUTH);
+		this.setTitle("腾讯qq");
+		this.setSize(500,350);
+		this.setIconImage(new ImageIcon("images/QQ.png").getImage());
+		this.setLocation(200, 200);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setVisible(true);
+
+
+	}
+
+}
 
 ```
