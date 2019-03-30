@@ -27,5 +27,9 @@ Redis中高级课程视频在线观看地址：https://www.bilibili.com/video/av
 
 更多分布式微服务视频教程
 
-http://www.majiaxueyuan.com/
-\
+http://www.majiaxueyuan.com/<br>
+
+idea开发工具快捷<br>
+main函数    psvm<br>
+输出        sout<br>
+for循环     fori<br>   
