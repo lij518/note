@@ -32,11 +32,11 @@ for循环     fori<br>
 #### mac 将本地文件上传服务器使用scp命令
 scp /users/lijun/downloads/jdk-8u181-linux-x64.tar.gz lijun@192.168.0.19:/home/lijun/app/ <br>
 #### 将本地文件上传下载hdfs  使用命令hadoop
-hadoop fs -put jdk-8u181-linux-x64.tar.gz hdfs://service1:9000/
-hadoop fs -get hdfs://service1:9000/jdk-8u181-linux-x64.tar.gz
+hadoop fs -put jdk-8u181-linux-x64.tar.gz hdfs://service1:9000/<br>
+hadoop fs -get hdfs://service1:9000/jdk-8u181-linux-x64.tar.gz<br>
 #### 误将大文件上传，导致objects一直存在
-git fetch -f -p
-git checkout master
-git reset origin/master --hard
-git reflog expire --expire=now --all
+git fetch -f -p <br>
+git checkout master <br>
+git reset origin/master --hard  <br>
+git reflog expire --expire=now --all <br>
 git gc --prune=now
