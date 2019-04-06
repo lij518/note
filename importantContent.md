@@ -28,4 +28,7 @@ http://www.majiaxueyuan.com/<br>
 idea开发工具快捷<br>
 main函数    psvm<br>
 输出        sout<br>
-for循环     fori<br>   
+for循环     fori<br>
+#### mac 将本地文件上传服务器使用scp命令
+scp /users/lijun/downloads/jdk-8u181-linux-x64.tar.gz lijun@192.168.0.19:/home/lijun/app/ <br>
+ 
