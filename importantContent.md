@@ -34,3 +34,8 @@ scp /users/lijun/downloads/jdk-8u181-linux-x64.tar.gz lijun@192.168.0.19:/home/l
 #### 将本地文件上传下载hdfs  使用命令hadoop
 hadoop fs -put jdk-8u181-linux-x64.tar.gz hdfs://service1:9000/
 hadoop fs -get hdfs://service1:9000/jdk-8u181-linux-x64.tar.gz
+#### 误将大文件上传，导致objects一直存在
+lijundeMacBook-Pro:github lijun$ git reset origin/master --hard
+HEAD is now at 9a7f6b2 java
+lijundeMacBook-Pro:github lijun$ git reflog expire --expire=now --all
+lijundeMacBook-Pro:github lijun$ git gc --prune=now
