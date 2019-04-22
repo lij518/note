@@ -40,3 +40,38 @@ git checkout master <br>
 git reset origin/master --hard  <br>
 git reflog expire --expire=now --all <br>
 git gc --prune=now
+#### sublimeText3安装sublimeREPL插件（控制台输入）
+设置快捷键：<br>
+```
+Preferences -> Key Bindings
+
+[   
+    {"keys":["f1"],
+    "caption": "SublimeREPL: Python - RUN current file",
+    "command": "run_existing_window_command", "args":
+    {"id": "repl_python_run",
+    "file": "config/Python/Main.sublime-menu"}},
+
+    {"keys":["f2"],
+    "caption": "SublimeREPL: Python",
+    "command": "run_existing_window_command", "args":
+    {"id": "repl_python",
+    "file": "config/Python/Main.sublime-menu"}}
+]
+```
+这里我设置的 F1 运行代码，F2 打开终端。<br>
+按 F2 运行终端，发现默认集成的是 python2，手动改成 pyhton3，方法如下：<br>
+Preferences -> Browse Packages->SublimeREPL->config->Python->Main.sublime-menu<br>
+将Main.sublime-menu文件所有的python改为python3<br>
+```
+"cmd": ["python3", "-i", "-u"],
+"cmd": ["python3", "-i", "-u", "-m", "pdb", "$file_basename"],
+"cmd": ["python3", "-u", "$file_basename"],
+"cmd": {
+    "osx": ["python3", "-u", "${packages}/SublimeREPL/config/Python/ipy_repl.py"],
+    "linux": ["python3", "-u", "${packages}/SublimeREPL/config/Python/ipy_repl.py"],
+    "windows": ["python3", "-u", "${packages}/SublimeREPL/config/Python/ipy_repl.py"]
+},
+```
+
+
