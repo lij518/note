@@ -73,5 +73,6 @@ Preferences -> Browse Packages->SublimeREPL->config->Python->Main.sublime-menu<b
     "windows": ["python3", "-u", "${packages}/SublimeREPL/config/Python/ipy_repl.py"]
 },
 ```
-
-
+#### github密码修改后的操作
+- git config --global user.name "lij518"
+- git config --global user.email "770811765@qq.com"
