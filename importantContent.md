@@ -76,3 +76,15 @@ Preferences -> Browse Packages->SublimeREPL->config->Python->Main.sublime-menu<b
 #### github密码修改后的操作
 - git config --global user.name "lij518"
 - git config --global user.email "770811765@qq.com"
+
+
+
+
+#### requests库的7个主要方法
+- requests.request() 构造一个请求，支撑一下各方法的基础方法
+- requests.get() 获取html网页的主要方法，对应于http的get
+- requests.head() 获取html网页头信息的方法，对应于http的head
+- request.post()  向html网页提交post请求的方法，对应于http的post
+- requests.put()    向html网页提交put请求的方法，对应于http的put
+- requests.patch()   向html网页提交局部修改请求，对应于http的patch
+- requests.delete()   向html页面提交删除请求，对应于http的delete
